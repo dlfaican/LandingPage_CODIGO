@@ -25,6 +25,7 @@
 				<form action="">
 					<input type="text" class="form-control rounded-0 my-4 text-center" placeholder="Escriba su Email" >
 					<button class="btn btn-light  rounded-0">SUSCRIBETE</button>
+					<button onclick="redirectToGitHub()">Iniciar sesión con GitHub</button>
 				</form>
 				<ul class="list-unstyled list-inline mt-4">
 					<li class="list-inline-item">
@@ -51,5 +52,15 @@
 			</div>
 		</div>
 	</header>
+	 <script>
+    		function redirectToGitHub() {
+     		 // Reemplaza 'YOUR_CLIENT_ID' con el ClientId de tu aplicación registrado en GitHub
+      		const clientId = '3ac3185b6a50d3be2703';
+      		const redirectUri = 'https://dlfaican.github.io/ScrollReveal_CODIGO/'; // La URL de redirección a tu servidor
+
+      		// Redirecciona al usuario a la página de inicio de sesión de GitHub
+      		window.location.href = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}`;
+    }
+  </script>
 </body>
 </html>
