@@ -52,14 +52,16 @@
 			</div>
 		</div>
 	</header>
-	 <script>
-    		function redirectToGitHub() {
-     		 // Reemplaza 'YOUR_CLIENT_ID' con el ClientId de tu aplicación registrado en GitHub
-      		const clientId = '3ac3185b6a50d3be2703';
-      		const redirectUri = 'https://dlfaican.github.io/ScrollReveal_CODIGO/'; // La URL de redirección a tu servidor
-
-      		// Redirecciona al usuario a la página de inicio de sesión de GitHub
-      		window.location.href = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}`;
+	<script>
+	    function redirectToGitHub() {
+	      const githubLoginUrl = 'https://github.com/login/oauth/authorize';
+	      const clientId = '3ac3185b6a50d3be2703';
+	      const redirectUri = 'https://dlfaican.github.io/ScrollReveal_CODIGO/'; // La URL de redirección a tu Proyecto B después de la autorización
+	      const scope = 'user';
+	
+	      const authUrl = `${githubLoginUrl}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scope}`;
+	
+	      window.location.href = authUrl;
     }
   </script>
 </body>
